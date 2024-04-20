@@ -12,6 +12,23 @@ spring:
       username: root
       password: admin
       driverClassName: com.mysql.cj.jdbc.Driver
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: api-dh-money
+            client-secret: 2bgKXNvbhtpbEUux2QmNfUev6D5hzqA4
+            scope: openid
+            realm: dh-money-users
+            serverUrl: http://localhost:8080
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8080/realms/dh-money-users
+        resourceserver:
+          jwt:
+            issuer-uri: http://localhost:8080/realms/dh-money-users
+            jwk-set-uri: http://localhost:8080/realms/dh-money-users/protocol/openid-connect/certs
 
 management:
   endpoints:
