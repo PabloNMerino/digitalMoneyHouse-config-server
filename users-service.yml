@@ -17,18 +17,25 @@ spring:
       client:
         registration:
           keycloak:
-            client-id: api-dh-money
-            client-secret: 2bgKXNvbhtpbEUux2QmNfUev6D5hzqA4
+            client-id: ${dh.keycloak.clientId}
+            client-secret: ${dh.keycloak.clientSecret}
             scope: openid
-            realm: dh-money-users
-            serverUrl: http://localhost:8080
+            realm: ${dh.keycloak.realm}
+            serverUrl: ${dh.keycloak.serverUrl}
         provider:
           keycloak:
-            issuer-uri: http://localhost:8080/realms/dh-money-users
+            issuer-uri: ${dh.keycloak.serverUrl}/realms/${dh.keycloak.realm}
         resourceserver:
           jwt:
-            issuer-uri: http://localhost:8080/realms/dh-money-users
-            jwk-set-uri: http://localhost:8080/realms/dh-money-users/protocol/openid-connect/certs
+            issuer-uri: ${dh.keycloak.serverUrl}/realms/${dh.keycloak.realm}
+            jwk-set-uri: ${dh.keycloak.serverUrl}/realms/${dh.keycloak.realm}/protocol/openid-connect/certs
+
+dh:
+  keycloak:
+    realm: dh-money-users
+    serverUrl: http://localhost:8080
+    clientId: api-dh-money
+    clientSecret: 2bgKXNvbhtpbEUux2QmNfUev6D5hzqA4
 
 management:
   endpoints:
