@@ -1,0 +1,61 @@
+spring:
+  application:
+    name: users-service
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate.event.merge.entity_copy_observer: allow
+    datasource:
+      url: jdbc:mysql://127.0.0.1:3306/user-service-db
+      username: root
+      password: admin
+      driverClassName: com.mysql.cj.jdbc.Driver
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info
+  info:
+    env:
+      enabled: true
+info:
+  app:
+    name: users-service
+    description: microservicio de registro y logueo (desde config server)
+    version: 1.0.0
+
+eureka:
+  instance:
+    hostname: localhost
+    statusPageUrlPath: http://localhost:8081/actuator/info
+    healthCheckUrlPath: http://localhost:8081/actuator/health
+
+server:
+  port: 8081
+    
+
+# MySQL Database Configuration
+# spring.jpa.hibernate.ddl-auto=create-drop
+# spring.datasource.url=jdbc:mysql://127.0.0.1:3306/user-service-db
+# spring.datasource.username=root
+# spring.datasource.password=admin
+# spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+# spring.jpa.show-sql= true
+# spring.jpa.properties.hibernate.event.merge.entity_copy_observer=allow
+
+#Actuator
+# management.endpoints.web.exposure.include=health,info
+# management.info.env.enabled=true
+# info.app.name=users-service
+# info.app.description=microservicio de registro y logueo (desde config server)
+# info.app.version=1.0.0
+
+#Redireccionamiento de URL
+# eureka.instance.statusPageUrlPath=http://localhost:8081/actuator/info
+# eureka.instance.healthCheckUrlPath=http://localhost:8081/actuator/health
+
+
+
