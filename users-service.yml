@@ -37,7 +37,9 @@ dh:
     clientId: api-dh-money
     clientSecret: 2bgKXNvbhtpbEUux2QmNfUev6D5hzqA4
     tokenEndpoint: ${dh.keycloak.serverUrl}/realms/${dh.keycloak.realm}/protocol/openid-connect/token
-#9jvDMRt9K1cujgirQ5WUizCKIJ5pqA4V
+    
+#Notebook: 9jvDMRt9K1cujgirQ5WUizCKIJ5pqA4V
+#PC: 2bgKXNvbhtpbEUux2QmNfUev6D5hzqA4
 
 management:
   endpoints:
