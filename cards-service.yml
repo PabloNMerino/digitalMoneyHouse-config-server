@@ -34,4 +34,4 @@ eureka:
     healthCheckUrlPath: http://localhost:8084/actuator/health
 
 server:
-  port: 8084
+  port: 8085
