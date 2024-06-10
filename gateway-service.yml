@@ -9,6 +9,9 @@ spring:
         serviceId: config-server
         enabled: true
     gateway:
+      default-filters:
+        - AddRequestHeader=X-Request-generated-by, gateway-service
+        - AddResponseHeader=X-Response-generated-by, gateway-service
       globalcors:
         cors-configurations:
           '[/**]':
