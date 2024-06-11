@@ -12,6 +12,17 @@ spring:
       default-filters:
         - AddRequestHeader=X-Request-generated-by, gateway-service
         - AddResponseHeader=X-Response-generated-by, gateway-service
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:5173"
+            allowedHeaders: '*'
+            allowedMethods:
+            - GET
+            - POST
+            - PUT
+            - PATCH
+            - DELETE
       routes:
         - id: users-service
           uri: lb://users-service
