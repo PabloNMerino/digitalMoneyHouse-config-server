@@ -25,14 +25,15 @@ spring:
             - PATCH
             - DELETE
       routes:
+        - id: users-service
+          uri: lb://users-service
+          predicates:
+            - Path=/user/**
+            
         - id: accounts-service
           uri: lb://accounts-service
           predicates:
             - Path=/account/**
-        - id: users-service
-          uri: lb://users-service
-          predicates:
-            - Path=/user/**        
 
 
 
