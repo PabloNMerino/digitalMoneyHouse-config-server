@@ -47,7 +47,7 @@ management:
 info:
   app:
     name: Gateway
-    description: API gateway
+    description: API gateway (remote)
     version: 1.0.0
 
 eureka:
