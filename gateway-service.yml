@@ -24,6 +24,7 @@ spring:
             - PUT
             - PATCH
             - DELETE
+            - OPTIONS
       routes:
         - id: users-service
           uri: lb://users-service
