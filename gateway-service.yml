@@ -9,30 +9,6 @@ spring:
         serviceId: config-server
         enabled: true
     gateway:
-      default-filters:
-          - AddRequestHeader=X-Request-generated-by, gateway-service
-          - AddResponseHeader=X-Response-generated-by, gateway-service
-        globalcors:
-          add-to-simple-url-handler-mapping: true
-          cors-configurations:
-            '[/**]':
-              #allowedOrigins: "http://localhost:5173"
-              #allowedHeaders: '*'
-              allowedMethods:
-                - GET
-                - POST
-                - PUT
-                - PATCH
-                - DELETE
-                - OPTIONS
-              allowedHeaders:
-                - Origin
-                - X-Requested-With
-                - Content-Type
-                - Accept
-                - Authorization
-              allowCredentials: true
-              maxAge: 3600
       routes:
         - id: users-service
           uri: lb://users-service
