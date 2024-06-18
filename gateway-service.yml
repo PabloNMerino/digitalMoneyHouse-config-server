@@ -9,7 +9,7 @@ spring:
         serviceId: config-server
         enabled: true
     gateway:
-      global-cors:
+      globalCors:
         corsConfigurations:
           '[/**]':
             allowedOrigins: "http://localhost:5173"
