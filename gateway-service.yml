@@ -10,25 +10,25 @@ spring:
         enabled: true
     gateway:
       global-cors:
-        cors-configurations:
+        corsConfigurations:
           '[/**]':
-            allowed-origins: "http://localhost:5173"
+            allowedOrigins: "http://localhost:5173"
             #allowedHeaders: '*'
-            allowed-methods:
+            allowedMethods:
               - GET
               - POST
               - PUT
               - PATCH
               - DELETE
               - OPTIONS
-            allowed-headers:
+            allowedHeaders:
               - Origin
               - X-Requested-With
               - Content-Type
               - Accept
               - Authorization
-            allow-credentials: true
-            max-age: 3600
+            allowCredentials: true
+            maxAge: 3600
       routes:
         - id: users-service
           uri: lb://users-service
