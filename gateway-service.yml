@@ -45,6 +45,12 @@ management:
     web:
       exposure:
         include: health, info
+    app:
+      cors:
+        allowed-credentials: false
+        allowed-methods: GET, POST
+        allowed-origins: "http://localhost:5173"
+        max-age: 1800
   info:
     env:
       enabled: true
