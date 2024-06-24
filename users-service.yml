@@ -8,7 +8,8 @@ spring:
     properties:
       hibernate.event.merge.entity_copy_observer: allow
     datasource:
-      url: jdbc:mysql://127.0.0.1:3306/user-service-db
+      #url: jdbc:mysql://127.0.0.1:3306/user-service-db
+      url: jdbc:mysql://dmhdb:3307/users_service
       username: root
       password: admin
       driverClassName: com.mysql.cj.jdbc.Driver
