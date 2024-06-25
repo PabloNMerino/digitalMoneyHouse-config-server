@@ -16,7 +16,7 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
     datasource:
-      url: jdbc:mysql://127.0.0.1:3307/users_service
+      url: jdbc:mysql://127.0.0.1:3306/user-service-db
       #url: jdbc:mysql://mysql:3306/dmhdatabase?createDatabaseIfNotExist=true&serverTimezone=UTC
       username: root
       password: admin
