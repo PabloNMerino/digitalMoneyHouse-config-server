@@ -25,7 +25,7 @@ management:
 info:
   app:
     name: transactions-service
-    description: microservicio de administracion y registro de transacciones entre usuarios
+    description: microservicio de administracion y registro de transacciones entre usuarios (remoto)
     version: 1.0.0
 
 eureka:
