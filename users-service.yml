@@ -1,19 +1,19 @@
 spring:
   application:
     name: users-service
-  #jpa:
-    #database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
-    #hibernate:
-      #ddl-auto: update
-    #show-sql: true
-    #properties:
-      #hibernate.event.merge.entity_copy_observer: allow
-    #datasource:
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate.event.merge.entity_copy_observer: allow
+    datasource:
       #url: jdbc:mysql://127.0.0.1:3307/users_service
-      #url: jdbc:mysql://mysql:3307/dmhdatabase
-      #username: root
-      #password: admin
-      #driverClassName: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://mysql:3307/dmhdatabase
+      username: root
+      password: admin
+      driverClassName: com.mysql.cj.jdbc.Driver
   security:
     oauth2:
       client:
