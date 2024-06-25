@@ -2,7 +2,7 @@ spring:
   application:
     name: users-service
   datasource:
-    url: jdbc:mysql://mysql:3307/dmhdatabase
+    url: jdbc:mysql://mysql:3307/dmhdatabase/
     username: root
     password: admin
   jpa:
