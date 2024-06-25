@@ -50,7 +50,7 @@ management:
 info:
   app:
     name: accounts-service
-    description: microservicio de administracion de billetera virtual
+    description: microservicio de administracion de billetera virtual (remoto)
     version: 1.0.0
 
 eureka:
