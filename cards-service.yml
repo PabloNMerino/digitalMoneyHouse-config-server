@@ -25,14 +25,14 @@ management:
 info:
   app:
     name: cards-service
-    description: microservicio de administracion y registro de tarjetas de credito y debito
+    description: microservicio de administracion y registro de tarjetas de credito y debito (remoto)
     version: 1.0.0
 
 eureka:
   instance:
     hostname: localhost
-    statusPageUrlPath: http://localhost:8084/actuator/info
-    healthCheckUrlPath: http://localhost:8084/actuator/health
+    statusPageUrlPath: http://localhost:8085/actuator/info
+    healthCheckUrlPath: http://localhost:8085/actuator/health
   client:
     serviceUrl:
       defaultZone: http://eureka-server:8761/eureka/
